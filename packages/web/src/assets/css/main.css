@@ -2,13 +2,23 @@
   --base-color: #f1f1f1;
   --primary-color: #226dca;
   --primary-color--light: #65a4f1;
-}
-* {
-  box-sizing: border-box;
+  --secondary-color: #d6276c;
+  --secondary-color--light: #f74089;
 }
 
-ul {
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 32px;
+  font-family: "Abel", sans-serif;
+  letter-spacing: 1.3px;
 }
 
 li {

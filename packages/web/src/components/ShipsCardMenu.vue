@@ -23,7 +23,7 @@ export default {
 <style scoped>
     .ships-selection {
         background-color: #fff;
-        max-width: 350px;
+        max-width: 420px;
         min-height: calc(100vh - 79px);
         max-height: calc(100vh - 79px);
         border-right: 2px solid #eee;
