@@ -1,5 +1,5 @@
 {
-  "name": "brasil-hack-export",
+  "name": "argonautas",
   "version": "1.0.0",
   "main": "index.js",
   "private": true,
@@ -8,7 +8,7 @@
       "packages/*"
     ]
   },
-  "repository": "git@github.com:diglopes/brasil-hack-export.git",
+  "repository": "git@github.com:diglopes/argonautas.git",
   "author": "Diego Lopes <diego-chez@hotmail.com>",
   "license": "MIT"
 }
