@@ -1,0 +1,21 @@
+:root {
+  --base-color: #f1f1f1;
+  --primary-color: #226dca;
+  --primary-color--light: #65a4f1;
+}
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: var(--base-color);
+  margin: 0;
+}
