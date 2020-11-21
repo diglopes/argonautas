@@ -3,7 +3,7 @@
         <nav class="navigation">
             <h1>Berço de atracação A</h1>
             <div class="buttons">
-                <BaseButton>
+                <BaseButton disabled>
                     <i class="fas fa-chevron-left button-arrow"></i>
                 </BaseButton>
                 <BaseButton>
