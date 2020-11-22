@@ -5,7 +5,7 @@
       ghost-class="ghost"
       v-model="week[daySelected]"
       group="ship"
-      @change="handloDrop"
+      @change="handleDrop"
       :disabled="loading"
     >
       <ShipCard
@@ -41,24 +41,25 @@ export default {
     },
   },
   methods: {
-    handloDrop(event) {
-      this.$store.commit("updateLoading", true);
-      const { areaFundeio, idTrajeto } = event.added.element;
-      console.log(event);
-      fetch(
-        `http://ec2-18-229-118-175.sa-east-1.compute.amazonaws.com:3000/estimarPraticagem?areaFundeio=${areaFundeio}&idTrajeto=${idTrajeto}`
-      )
-        .then((data) => data.json())
-        .then((json) => {
-          this.$set(
-            this.week[this.daySelected][event.added.newIndex],
-            "praticagem",
-            json.tempoEstimado
-          );
-        })
-        .finally(() => {
-          this.$store.commit("updateLoading", false);
-        });
+    handleDrop(event) {
+      if (event.added.element) {
+        this.$store.commit("updateLoading", true);
+        const { areaFundeio, idTrajeto } = event.added.element;
+        fetch(
+          `http://ec2-18-229-118-175.sa-east-1.compute.amazonaws.com:3000/estimarPraticagem?areaFundeio=${areaFundeio}&idTrajeto=${idTrajeto}`
+        )
+          .then((data) => data.json())
+          .then((json) => {
+            this.$set(
+              this.week[this.daySelected][event.added.newIndex],
+              "praticagem",
+              json.tempoEstimado
+            );
+          })
+          .finally(() => {
+            this.$store.commit("updateLoading", false);
+          });
+      }
     },
   },
 };
