@@ -47,7 +47,6 @@ export default {
       )
         .then((data) => data.json())
         .then((json) => {
-          console.log(json);
           this.$set(this.week[this.daySelected][event.added.newIndex], 'praticagem', json.tempoEstimado)
         }).finally(() => {
           this.loading = false
