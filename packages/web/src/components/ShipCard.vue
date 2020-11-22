@@ -1,5 +1,10 @@
 <template>
   <li class="ship-card">
+    <div class="praticagem" v-if="showPraticagem">
+      <p>Tempo estimado de praticagem:</p>
+      <Loading v-if="!ship.praticagem"/>
+      <span v-else>{{ship.praticagem}} min</span>
+    </div>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512.042 512.042"
@@ -60,10 +65,15 @@
 </template>
 
 <script>
+import Loading from '@/components/Loading.vue'
 export default {
   props: {
     ship: { type: Object },
+    showPraticagem: { type: Boolean, default: false }
   },
+  components: {
+    Loading
+  }
 };
 </script>
 
@@ -80,7 +90,7 @@ export default {
   grid-column-gap: 20px;
   position: relative;
   overflow: hidden;
-  max-height: 180px;
+  max-height: 200px;
 }
 
 .ship-card:hover {
@@ -124,5 +134,22 @@ export default {
   right: 0;
   bottom: -30px;
   fill: rgba(0, 0, 0, 0.045);
+}
+
+.praticagem {
+  grid-column: 1/-1;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  display: flex;
+}
+
+.praticagem p {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.loading {
+  color: #777;
 }
 </style>
