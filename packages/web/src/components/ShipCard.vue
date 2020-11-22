@@ -71,15 +71,16 @@ export default {
 .ship-card {
   border-radius: 4px;
   border: 2px solid #ddd;
+  background-color: #fff;
   transition: 0.3s all ease;
   padding: 20px;
   cursor: grab;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
-
   position: relative;
   overflow: hidden;
+  max-height: 180px;
 }
 
 .ship-card:hover {

@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    dockingShips: [{}]
+    day: 0
   },
   mutations: {
-    UPDATE_DOCKING_SHIPS(ctx, payload) {
-      ctx.state.dockingShips = payload
+    updateDay(state, payload) {
+      state.day = payload
     }
   },
   actions: {

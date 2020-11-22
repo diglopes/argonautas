@@ -3,10 +3,10 @@
     <Draggable
       class="drag"
       ghost-class="ghost"
-      v-model="ships"
+      v-model="week[daySelected]"
       group="ship"
     >
-      <ShipCard v-for="(ship, index) in ships" :key="index" :ship="ship" class="card">
+      <ShipCard v-for="(ship, index) in week[daySelected]" :key="index" :ship="ship" class="card">
       </ShipCard>
     </Draggable>
   </ul>
@@ -19,26 +19,39 @@ import ShipCard from "@/components/ShipCard.vue";
 
 export default {
   data: () => ({
-    ships: [],
+    week: [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   }),
   components: {
     Draggable,
     ShipCard
   },
+  computed: {
+    daySelected() {
+      return this.$store.state.day;
+    },
+  }
 };
 </script>
 
 <style scoped>
-.windows {
+
+.drag {
   margin-top: 20px;
   overflow-y: scroll;
   max-height: 420px;
-}
-
-.drag {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  width: 100%;
+  min-height: 300px;
 }
 
 .card  li {

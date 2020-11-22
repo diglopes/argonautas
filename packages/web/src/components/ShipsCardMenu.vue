@@ -1,6 +1,6 @@
 <template>
   <ul class="ships-selection">
-    <Draggable v-model="ships" ghost-class="ghost" :sort="false" group="ship">
+    <Draggable v-model="ships" ghost-class="ghost" class="draga" group="ship">
       <ShipCard class="card" v-for="(ship, index) in ships" :key="index" :ship="ship"/>
     </Draggable>
   </ul>
@@ -107,6 +107,10 @@ export default {
 
 .ghost {
     opacity: 0.2;
+}
+
+.draga {
+  height: 100%;
 }
 
 .card + .card {

@@ -1,12 +1,12 @@
 <template>
     <ul class="months">
-        <li class="before-3">Setembro</li>
-        <li class="before-2">Outrubro</li>
-        <li class="before-1">Novembro</li>
-        <li class="selected">Dezembro</li>
-        <li class="before-1">Janeiro</li>
-        <li class="before-2">Fevereiro</li>
-        <li class="before-3">Março</li>
+        <li class="before-3">Agosto</li>
+        <li class="before-2">Setembro</li>
+        <li class="before-1">Outubro</li>
+        <li class="selected">Novembro</li>
+        <li class="before-1">Dezembro</li>
+        <li class="before-2">Janeiro</li>
+        <li class="before-3">Fevereiro</li>
     </ul>
 </template>
 
