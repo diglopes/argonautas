@@ -24,6 +24,8 @@ export default {
         destiny: "BR SSZ",
         atd: "22/11/2020 - 05:45",
         ata: "22/11/2020 - 18:37",
+        areaFundeio: "5",
+        idTrajeto: "18"
       },
       {
         name: "CAP SAN ARTEMISSIO",
@@ -32,6 +34,8 @@ export default {
         destiny: "BR SSZ",
         atd: "21/11/2020 - 23:15",
         ata: "22/11/2020 - 13:30",
+        areaFundeio: "3",
+        idTrajeto: "6"
       },
        {
         name: "CAP SAN NICOLLS",
@@ -40,6 +44,8 @@ export default {
         destiny: "BR PNG",
         atd: "21/11/2020 - 23:11",
         ata: "22/11/2020 - 12:00",
+        areaFundeio: "3",
+        idTrajeto: "3"
       },
        {
         name: "FEDERAL SUTTON",
@@ -48,6 +54,8 @@ export default {
         destiny: "BR SSZ",
         atd: "13/11/2020 - 16:24",
         ata: "23/11/2020 - 08:03",
+        areaFundeio: "3",
+        idTrajeto: "10"
       },
       {
         name: "ULTRA LEOPARD",
@@ -56,6 +64,8 @@ export default {
         destiny: "BR SSZ",
         atd: "21/10/2020 - 21:25",
         ata: "23/11/2020 - 17:04",
+        areaFundeio: "4",
+        idTrajeto: "27"
       },
        {
         name: "G R A",
@@ -64,6 +74,8 @@ export default {
         destiny: "BR SSZ",
         atd: "05/10/2020 - 15:29",
         ata: "22/11/2020 - 07:29",
+        areaFundeio: "3",
+        idTrajeto: "2"
       },
       {
         name: "ULTRA LEOPARD",
@@ -72,6 +84,8 @@ export default {
         destiny: "BR SSZ",
         atd: "21/10/2020 - 21:25",
         ata: "23/11/2020 - 17:04",
+        areaFundeio: "5",
+        idTrajeto: "53"
       },
        {
         name: "G R A",
@@ -80,6 +94,8 @@ export default {
         destiny: "BR SSZ",
         atd: "05/10/2020 - 15:29",
         ata: "22/11/2020 - 07:29",
+        areaFundeio: "4",
+        idTrajeto: "43"
       },
        {
         name: "MSC BRUNELLA",
@@ -88,6 +104,8 @@ export default {
         destiny: "BR SSZ",
         atd: "21/10/2020 - 16:29",
         ata: "22/11/2020 - 07:38",
+        areaFundeio: "5",
+        idTrajeto: "48"
       },
     ],
   }),

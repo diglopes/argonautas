@@ -41,8 +41,10 @@ export default {
   methods: {
     handloDrop(event) {
       this.loading = true
+      const { areaFundeio, idTrajeto}  = event.added.element
+      console.log(event);
       fetch(
-        "http://ec2-18-229-118-175.sa-east-1.compute.amazonaws.com:3000/estimarPraticagem?areaFundeio=5&idTrajeto=58"
+        `http://ec2-18-229-118-175.sa-east-1.compute.amazonaws.com:3000/estimarPraticagem?areaFundeio=${areaFundeio}&idTrajeto=${idTrajeto}`
       
       )
         .then((data) => data.json())
