@@ -27,7 +27,6 @@ import ShipCard from "@/components/ShipCard.vue";
 export default {
   data: () => ({
     week: [[], [], [], [], [], [], []],
-    loading: false
   }),
   components: {
     Draggable,
@@ -37,22 +36,29 @@ export default {
     daySelected() {
       return this.$store.state.day;
     },
+    loading() {
+      return this.$store.state.loading;
+    },
   },
   methods: {
     handloDrop(event) {
-      this.loading = true
-      const { areaFundeio, idTrajeto}  = event.added.element
+      this.$store.commit("updateLoading", true);
+      const { areaFundeio, idTrajeto } = event.added.element;
       console.log(event);
       fetch(
         `http://ec2-18-229-118-175.sa-east-1.compute.amazonaws.com:3000/estimarPraticagem?areaFundeio=${areaFundeio}&idTrajeto=${idTrajeto}`
-      
       )
         .then((data) => data.json())
         .then((json) => {
-          this.$set(this.week[this.daySelected][event.added.newIndex], 'praticagem', json.tempoEstimado)
-        }).finally(() => {
-          this.loading = false
+          this.$set(
+            this.week[this.daySelected][event.added.newIndex],
+            "praticagem",
+            json.tempoEstimado
+          );
         })
+        .finally(() => {
+          this.$store.commit("updateLoading", false);
+        });
     },
   },
 };

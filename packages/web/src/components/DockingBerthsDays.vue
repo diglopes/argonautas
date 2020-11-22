@@ -3,7 +3,7 @@
     <li
       v-for="(day, index) in daysList"
       :key="day"
-      :class="{'selected': index === daySelected}"
+      :class="{'selected': index === daySelected, 'loading': loading}"
       @click="handleClick(index)"
     >{{day}}</li>
   </ul>
@@ -17,12 +17,17 @@ export default {
   }),
   methods: {
     handleClick(index) {
-      this.$store.commit('updateDay', index)
+      if(!this.loading) {
+        this.$store.commit('updateDay', index)
+      }
     },
   },
   computed: {
     daySelected() {
       return this.$store.state.day;
+    },
+    loading() {
+      return this.$store.state.loading;
     },
   },
 };
@@ -49,7 +54,7 @@ export default {
   transition: 0.3s all ease;
 }
 
-.days li:not(.selected):hover {
+.days li:not(.selected):not(.loading):hover {
   background-color: #bbb;
 }
 
@@ -57,6 +62,11 @@ export default {
   background-color: #f59d67;
   color: #fff;
   position: relative;
+}
+
+.days .loading {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 .days .selected::after {
