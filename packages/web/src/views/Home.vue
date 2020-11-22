@@ -3,7 +3,7 @@
     <BaseHeader />
     <div class="wrapper">
       <ShipsCardMenu/>
-      <DockingBerths />
+      <DockingBerths class="docking-berths"/>
     </div>
   </div>
 </template>

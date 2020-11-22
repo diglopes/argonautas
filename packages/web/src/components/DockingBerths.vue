@@ -11,15 +11,26 @@
                 </BaseButton>
             </div>
         </nav>
+
+        <DockingBerthsMonths />
+        <DockingBerthsDays />
+
+        <DockingBerthsWindows />
     </div>
 </template>
 
 <script>
 import BaseButton from '@/components/BaseButton.vue'
+import DockingBerthsMonths from '@/components/DockingBerthsMonths.vue'
+import DockingBerthsDays from '@/components/DockingBerthsDays.vue'
+import DockingBerthsWindows from '@/components/DockingBerthsWindows.vue'
 
 export default {
     components: {
-        BaseButton
+        BaseButton,
+        DockingBerthsMonths,
+        DockingBerthsDays,
+        DockingBerthsWindows
     }
 }
 </script>
@@ -36,6 +47,7 @@ export default {
         justify-content: space-between;
         border-bottom: 2px solid #ddd;
         padding-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .buttons button:first-child {

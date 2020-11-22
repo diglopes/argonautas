@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    dockingShips: [{}]
   },
   mutations: {
+    UPDATE_DOCKING_SHIPS(ctx, payload) {
+      ctx.state.dockingShips = payload
+    }
   },
   actions: {
   },
